@@ -74,8 +74,15 @@ body { background: #f4f4f4; padding: 20px; }
 .close-lightbox { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; cursor: pointer; }
 
 /* --- মোবাইল রেসপন্সিভ --- */
+/* --- মোবাইল লাইটবক্স ক্লোজ বাটন ফিক্স --- */
 @media (max-width: 600px) {
-    .modal-content { width: 100%; padding: 10px; }
-    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
-    .gallery-img { height: 150px; }
+    .close-lightbox {
+        top: 10px;      /* ওপর থেকে সামান্য নিচে */
+        right: 15px;    /* ডানপাশ থেকে একটু ভেতরে */
+        font-size: 50px; /* বাটনটি বড় করা হলো */
+        background: rgba(0, 0, 0, 0.5); /* বাটনের নিচে হালকা ছায়া যাতে সহজে চোখে পড়ে */
+        padding: 5px 15px;
+        border-radius: 50%;
+        line-height: 1;
+    }
 }
