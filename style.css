@@ -73,30 +73,29 @@ body { background: #f4f4f4; padding: 20px; }
 .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 90%; position: relative; top: 5%; }
 /* --- লাইটবক্স ক্লোজ বাটন ফিক্সড --- */
 /* --- লাইটবক্স ক্লোজ বাটন ফিক্সড --- */
+/* --- ডিফল্টভাবে X বাটন উপরে ডানদিকে (ল্যাপটপের জন্য) --- */
 .close-lightbox { 
-    position: fixed !important; /* এটি বাটনটিকে স্ক্রিনের সাথে আটকে রাখবে */
-    top: 15px !important; 
-    right: 15px !important; 
+    position: fixed; 
+    top: 20px; 
+    right: 35px; 
     color: #fff; 
-    font-size: 50px; 
+    font-size: 40px; 
     cursor: pointer; 
-    z-index: 9999 !important; /* সবকিছুর ওপরে রাখবে */
-    line-height: 1;
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 5px 15px;
-    border-radius: 50%;
+    z-index: 9999;
 }
 
-/* --- মোবাইল রেসপন্সিভ --- */
-/* --- মোবাইল লাইটবক্স ক্লোজ বাটন ফিক্স --- */
+/* --- শুধু মোবাইলের জন্য X বাটন নিচে মাঝখানে --- */
 @media (max-width: 600px) {
     .close-lightbox {
-        top: 10px;      /* ওপর থেকে সামান্য নিচে */
-        right: 15px;    /* ডানপাশ থেকে একটু ভেতরে */
-        font-size: 50px; /* বাটনটি বড় করা হলো */
-        background: rgba(0, 0, 0, 0.5); /* বাটনের নিচে হালকা ছায়া যাতে সহজে চোখে পড়ে */
-        padding: 5px 15px;
-        border-radius: 50%;
-        line-height: 1;
+        top: auto !important;       /* ওপরের পজিশন বাদ */
+        bottom: 20px !important;    /* একদম নিচে */
+        right: auto !important;     /* ডানের পজিশন বাদ */
+        left: 50% !important;       /* বাম থেকে ৫০% */
+        transform: translateX(-50%) !important; /* একদম মাঝখানে আনার জন্য */
+        font-size: 50px !important; 
+        background: rgba(0, 0, 0, 0.6) !important; 
+        padding: 5px 20px !important;
+        border-radius: 50px !important; /* লম্বাটে বাটন বা গোল বাটন */
+        z-index: 9999 !important;
     }
 }
