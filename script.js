@@ -146,7 +146,7 @@ function openLightbox(imgSrc) {
 
 // ===== WHATSAPP ORDER =====
 function orderNow(productName, price) {
-    const phoneNumber = "8801576610125"; 
+    const phoneNumber = "8801311657122"; 
 
     const message = `হ্যালো, আমি এই পণ্যটি অর্ডার করতে চাই: ${productName}। দাম: ₹${price}। দয়া করে বিস্তারিত জানান।`;
 
