@@ -71,7 +71,20 @@ body { background: #f4f4f4; padding: 20px; }
 /* --- লাইটবক্স --- */
 .lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
 .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 90%; position: relative; top: 5%; }
-.close-lightbox { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; cursor: pointer; }
+/* --- লাইটবক্স ক্লোজ বাটন ফিক্সড --- */
+.close-lightbox { 
+    position: fixed !important; /* এটি বাটনটিকে স্ক্রিনের সাথে আটকে রাখবে */
+    top: 15px !important; 
+    right: 15px !important; 
+    color: #fff; 
+    font-size: 50px; 
+    cursor: pointer; 
+    z-index: 9999 !important; /* সবকিছুর ওপরে রাখবে */
+    line-height: 1;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 5px 15px;
+    border-radius: 50%;
+}
 
 /* --- মোবাইল রেসপন্সিভ --- */
 /* --- মোবাইল লাইটবক্স ক্লোজ বাটন ফিক্স --- */
