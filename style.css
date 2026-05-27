@@ -1,0 +1,81 @@
+/* --- মূল স্টাইল --- */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { background: #f4f4f4; padding: 20px; }
+
+.product-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.product-card { 
+    background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #ddd; 
+    display: flex; flex-direction: column; height: 100%; 
+}
+
+.product-card img { width: 100%; height: 280px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+
+/* --- বাটন গ্রুপ (পাশাপাশি রাখার জন্য) --- */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto; /* কার্ডের নিচে বাটন থাকবে */
+}
+
+/* --- বাটন স্টাইল --- */
+.view-btn, .order-btn {
+    flex: 1; /* সমান জায়গা নেবে */
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.view-btn { 
+    background: linear-gradient(135deg, #e056fd, #be2edd); 
+    color: #fff; 
+    text-transform: uppercase;
+}
+
+.order-btn { 
+    background: #25d366; 
+    color: #fff;
+}
+
+.view-btn:hover { background: #be2edd; transform: translateY(-2px); }
+.order-btn:hover { background: #128c7e; transform: translateY(-2px); }
+
+/* --- মোডাল ও গ্যালারি --- */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; overflow-y: auto; padding: 20px; }
+
+.back-btn { 
+    background: #ffffff; color: #333; border: 2px solid #333; 
+    padding: 12px 25px; border-radius: 50px; cursor: pointer; 
+    font-weight: bold; font-size: 16px; transition: all 0.3s ease; 
+    display: inline-flex; align-items: center; margin-bottom: 20px;
+}
+
+.back-btn:hover { background: #e0f7fa; color: #006064; border-color: #006064; transform: translateX(-5px); }
+
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 10px; }
+.gallery-img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; cursor: pointer; transition: transform 0.3s; }
+.gallery-img:hover { transform: scale(1.03); }
+
+/* --- লাইটবক্স --- */
+.lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
+.lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 90%; position: relative; top: 5%; }
+.close-lightbox { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; cursor: pointer; }
+
+/* --- মোবাইল রেসপন্সিভ --- */
+@media (max-width: 600px) {
+    .modal-content { width: 100%; padding: 10px; }
+    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+    .gallery-img { height: 150px; }
+}
