@@ -126,7 +126,7 @@ function openLightbox(imgSrc) {
 
 // হোয়াটসঅ্যাপে অর্ডার করার লজিক
 function orderNow(productName, price) {
-    const phoneNumber = "01311657122"; 
+    const phoneNumber = "01576610125"; 
     const message = `হ্যালো, আমি এই পণ্যটি অর্ডার করতে চাই: ${productName}। দাম: ₹${price}। দয়া করে বিস্তারিত জানান।`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
