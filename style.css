@@ -72,6 +72,7 @@ body { background: #f4f4f4; padding: 20px; }
 .lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
 .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 90%; position: relative; top: 5%; }
 /* --- লাইটবক্স ক্লোজ বাটন ফিক্সড --- */
+/* --- লাইটবক্স ক্লোজ বাটন ফিক্সড --- */
 .close-lightbox { 
     position: fixed !important; /* এটি বাটনটিকে স্ক্রিনের সাথে আটকে রাখবে */
     top: 15px !important; 
